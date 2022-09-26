@@ -1,0 +1,138 @@
+.container {
+  margin: 40px auto;
+  max-width: 600px;
+  border-style: none;
+  border-color: rgb(161, 161, 161);
+  padding: 20px 20px 20px 20px;
+  border-radius: 4px;
+}
+.button-container {
+  margin: 0 auto;
+  max-width: 568px;
+}
+.info-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: none;
+  border-radius: 4px;
+  border-color: rgb(176, 175, 175);
+}
+.search-button {
+  background-color: #61b2d1;
+  color: white;
+  border-color: #61b2d1;
+  font-family: "Montserrat", sans-serif;
+}
+.search-button:hover {
+  background-color: #4b8aa3;
+  border-color: #4b8aa3;
+}
+.form-control {
+  border: 0.5px solid #4b8aa3;
+  border-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+h5 {
+  text-align: center;
+}
+#currentCity {
+  text-align: right;
+  margin: 0;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+#temperature {
+  font-size: 60px;
+  padding-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  left: 20px;
+}
+.units {
+  font-size: 18px;
+  position: relative;
+  top: -25px;
+  left: 20px;
+  margin: 0 auto;
+  padding: 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+.card {
+  border-style: none;
+}
+#card-degree {
+  padding: 0 0;
+}
+#first-card {
+  padding-top: 20px;
+}
+video {
+  max-width: 568px;
+  border-radius: 4px;
+}
+.picContainer {
+  max-width: 568px;
+  border-radius: 4px;
+}
+.week-days {
+  width: 568px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+#sun2 {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+}
+#rain {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+#storm {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+}
+.h,
+.p,
+.w {
+  color: #3f4954;
+  font-family: "Montserrat", sans-serif;
+}
+#date,
+#wed,
+#hour,
+#status {
+  color: #3f4954;
+  font-family: "Montserrat", sans-serif;
+}
+.col-sm-2 {
+  margin: 0 auto;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+.card-text {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+#footer {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+#source {
+  text-decoration: none;
+}
+#celsius-link.active {
+  color: #3f4954;
+  cursor: default;
+}
