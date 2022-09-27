@@ -24,12 +24,16 @@ function formatDate(timestamp) {
 }
 function changeAnimation(description) {
   let video = document.querySelector("#animation");
-  if (description === "light intensity shower rain" && "rain" && "light rain") {
+  if (
+    description === "light intensity shower rain" ||
+    description === "rain" ||
+    description === "light rain"
+  ) {
     video.setAttribute("src", `videos/rainyWeather.mp4`);
   } else if (
-    description === "broken clouds" &&
-    "scattered clouds" &&
-    "few clouds"
+    description === "broken clouds" ||
+    description === "scattered clouds" ||
+    description === "few clouds"
   ) {
     video.setAttribute("src", `videos/cloudsWeather.mp4`);
   } else if (description === "sunny") {
