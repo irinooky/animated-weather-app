@@ -81,8 +81,7 @@ video {
   max-width: 568px;
   border-radius: 4px;
 }
-.week-days {
-  width: 568px;
+#week-days {
   display: block;
   margin: 0 auto;
   border-radius: 4px;
@@ -121,9 +120,14 @@ video {
   padding: 5px;
   font-family: "Montserrat", sans-serif;
 }
-.card-text {
+.card-text,
+.max,
+.min {
   text-align: center;
   font-family: "Montserrat", sans-serif;
+}
+.min {
+  color: rgb(123, 123, 123);
 }
 #footer {
   text-align: center;

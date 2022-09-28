@@ -22,22 +22,54 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-sm-2">
+            <div class="card days">
+                <div class="card-body">
+                  <h5 class="card-title">${day}</h5>
+                  <img src="images/sun2.png" id="sun2" alt="sun" />
+                  <p class="card-text">
+                    <span class="max">23°</span>  <span class="min">13°</span>
+                  </p>
+                  </div>
+                  </div>
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function changeAnimation(description) {
   let video = document.querySelector("#animation");
   if (
     description === "light intensity shower rain" ||
     description === "rain" ||
-    description === "light rain"
+    description === "light rain" ||
+    description === "moderate rain" ||
+    description === "drizzle"
   ) {
     video.setAttribute("src", `videos/rainyWeather.mp4`);
   } else if (
     description === "broken clouds" ||
     description === "scattered clouds" ||
-    description === "few clouds"
+    description === "few clouds" ||
+    description === "overcast clouds"
   ) {
     video.setAttribute("src", `videos/cloudsWeather.mp4`);
   } else if (description === "sunny") {
     video.setAttribute("src", `videos/sunnyWeather.mp4`);
+  } else if (description === "snow") {
+    video.setAttribute("src", `videos/snowWeather.mp4`);
   } else {
     video.setAttribute("src", `videos/clearSkyWeather.mp4`);
   }
@@ -111,3 +143,4 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", convertToFahrenheit);
 
 search("Zürich");
+displayForecast();
