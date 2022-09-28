@@ -22,31 +22,36 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-function displayForecast() {
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
+   
             <div class="col-sm-2">
-            <div class="card days">
-                <div class="card-body">
                   <h5 class="card-title">${day}</h5>
                   <img src="images/sun2.png" id="sun2" alt="sun" />
                   <p class="card-text">
                     <span class="max">23°</span>  <span class="min">13°</span>
-                  </p>
-                  </div>
-                  </div>
-            </div>
-          `;
+                  </p>    
+          </div>`;
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "c62ebe2801487103359e5c2553337660";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function changeAnimation(description) {
@@ -94,6 +99,7 @@ function displayWeatherCondition(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
   changeAnimation(response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 
 let units = "metric";
@@ -143,4 +149,3 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", convertToFahrenheit);
 
 search("Zürich");
-displayForecast();
