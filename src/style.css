@@ -140,3 +140,6 @@ video {
   color: #3f4954;
   cursor: default;
 }
+.row {
+  padding: 10px;
+}
