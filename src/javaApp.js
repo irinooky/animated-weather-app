@@ -51,7 +51,7 @@ function displayForecast(response) {
                   }@2x.png"
                   alt=""
                   width="55"
-                  />
+                 />
                   <p class="card-text">
                     <span class="max">${Math.round(
                       forecastDay.temp.max
