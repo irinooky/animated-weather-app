@@ -36,7 +36,7 @@ function displayForecast(response) {
    
             <div class="col-sm-2">
             <div class="card days">
-          <div class="card-body">
+            <div class="card-body">
                   <h5 class="card-title">${day}</h5>
                   <img src="images/sun2.png" id="sun2" alt="sun" />
                   <p class="card-text">
