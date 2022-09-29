@@ -83,7 +83,8 @@ function changeAnimation(description) {
     description === "rain" ||
     description === "light rain" ||
     description === "moderate rain" ||
-    description === "drizzle"
+    description === "drizzle" ||
+    description === "mist"
   ) {
     video.setAttribute("src", `videos/rainyWeather.mp4`);
   } else if (
