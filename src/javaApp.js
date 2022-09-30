@@ -83,8 +83,7 @@ function changeAnimation(description) {
     description === "rain" ||
     description === "light rain" ||
     description === "moderate rain" ||
-    description === "drizzle" ||
-    description === "mist"
+    description === "drizzle"
   ) {
     video.setAttribute("src", `videos/rainyWeather.mp4`);
   } else if (
@@ -146,29 +145,5 @@ function convertToCelsius(event) {
   event.preventDefault();
   units = "metric";
 }
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let fahrenheitTemperature = Math.round(celsiusTemperature * 1.8) + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-let celsiusTemperature = null;
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", convertToCelsius);
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", convertToFahrenheit);
 
 search("Zürich");
