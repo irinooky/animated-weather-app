@@ -23,7 +23,11 @@
   border-color: #61b2d1;
   font-family: "Montserrat", sans-serif;
 }
-.search-button:hover {
+.search-button:hover,
+.search-button:focus,
+.search-button:active,
+.search-button.active {
+  color: #fff;
   background-color: #4b8aa3;
   border-color: #4b8aa3;
 }
