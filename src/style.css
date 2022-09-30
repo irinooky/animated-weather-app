@@ -51,22 +51,20 @@ h5 {
 .units {
   font-size: 18px;
   position: relative;
-  top: -25px;
+  top: -29px;
   left: 20px;
   margin: 0 auto;
   padding: 0 0;
   font-family: "Montserrat", sans-serif;
 }
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-}
+
 p {
   margin: 0;
 }
 .card {
   border-style: none;
 }
+
 #card-degree {
   padding: 0 0;
 }
@@ -81,10 +79,11 @@ video {
   max-width: 568px;
   border-radius: 4px;
 }
-#week-days {
+#forecast {
   display: block;
   margin: 0 auto;
   border-radius: 4px;
+  padding: 0;
 }
 #sun2 {
   width: 30px;
@@ -143,8 +142,17 @@ video {
 .row {
   padding: 10px;
 }
-
 img {
   display: block;
   margin: 0 auto;
+}
+#myName {
+  text-decoration: none;
+}
+#logo {
+  width: 60px;
+}
+#irina,
+#text {
+  color: #3f4954;
 }
