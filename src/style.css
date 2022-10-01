@@ -148,3 +148,6 @@ img {
 #text {
   color: #3f4954;
 }
+#iconLink {
+  text-decoration: none;
+}
