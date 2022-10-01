@@ -46,11 +46,9 @@ function displayForecast(response) {
               <div class="card-body">
                   <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
                  
-                  <img src="http://openweathermap.org/img/wn/${
-                    forecastDay.weather[0].icon
-                  }@2x.png"
+                  <img src="${changeIcon(forecastDay.weather[0].description)}"
                   alt=""
-                  width="55"
+                  width="35"
                  />
                   <p class="card-text">
                     <span class="max">${Math.round(
@@ -144,6 +142,34 @@ form.addEventListener("submit", handleSubmit);
 function convertToCelsius(event) {
   event.preventDefault();
   units = "metric";
+}
+
+function changeIcon(description) {
+  let iconPath = "";
+  if (
+    description === "light intensity shower rain" ||
+    description === "rain" ||
+    description === "light rain" ||
+    description === "moderate rain" ||
+    description === "drizzle"
+  ) {
+    iconPath = `images/rainy.png`;
+  } else if (
+    description === "broken clouds" ||
+    description === "scattered clouds" ||
+    description === "few clouds" ||
+    description === "overcast clouds"
+  ) {
+    iconPath = `images/cloudy.png`;
+  } else if (description === "sunny") {
+    iconPath = `images/sun2.png`;
+  } else if (description === "snow") {
+    iconPath = `images/snow.png`;
+  } else {
+    iconPath = `images/sun2.png`;
+  }
+
+  return iconPath;
 }
 
 search("Zürich");

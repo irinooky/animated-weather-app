@@ -17,12 +17,7 @@
   border-radius: 4px;
   border-color: rgb(176, 175, 175);
 }
-.search-button {
-  background-color: #61b2d1;
-  color: white;
-  border-color: #61b2d1;
-  font-family: "Montserrat", sans-serif;
-}
+
 .search-button:hover,
 .search-button:focus,
 .search-button:active,
@@ -31,6 +26,13 @@
   background-color: #4b8aa3;
   border-color: #4b8aa3;
 }
+.search-button {
+  background-color: #61b2d1;
+  color: white;
+  border-color: #61b2d1;
+  font-family: "Montserrat", sans-serif;
+}
+
 .form-control {
   border: 0.5px solid #4b8aa3;
   border-style: none;
@@ -87,24 +89,9 @@ video {
   display: block;
   margin: 0 auto;
   border-radius: 4px;
-  padding: 0;
-}
-#sun2 {
-  width: 30px;
-  display: block;
-  margin: 0 auto;
-}
-#rain {
-  width: 30px;
-  display: block;
-  margin: 0 auto;
+  padding: 5px 0px;
 }
 
-#storm {
-  width: 30px;
-  display: block;
-  margin: 0 auto;
-}
 .h,
 .p,
 .w {
@@ -147,6 +134,7 @@ video {
   padding: 10px;
 }
 img {
+  padding: 10px 0px;
   display: block;
   margin: 0 auto;
 }
