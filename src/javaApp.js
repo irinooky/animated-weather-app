@@ -151,6 +151,7 @@ function changeIcon(description) {
     description === "rain" ||
     description === "light rain" ||
     description === "moderate rain" ||
+    description === "heavy intensity rain" ||
     description === "drizzle"
   ) {
     iconPath = `images/rainy.png`;
